@@ -48,7 +48,6 @@ We are yet to implement these preprocessing methodologies on this fNIRS data, ex
 
 Shimmer's Data (Physiological Data):
 To analyze the physiological behavior, they have used Shimmer's sensors and Microsoft band to detect the motion using Accelerometer, GSR (Galvanic Skin Response) to sense skin gland activity, ECG (Electrocardiography) to know the heart rate and Gyroscope to sense movement.
-Plot showing VR food selection baseline start and end on the shimmer data points.
 
  
 
