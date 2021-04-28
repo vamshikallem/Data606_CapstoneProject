@@ -56,5 +56,4 @@ Methodology:
 2. Data preprocessing to extract High Quality Signals.
 3. Feature Extraction to create Metadata required to formulate ML models.
 4. Automate pre-processing for whole data.
-5. Multivariate Time-Series analysis using VAR and LSTM’s.
-6. Multimodal Cross-Correlation of Neural and Physical data
+5. Feature based modeling to discriminate events.
