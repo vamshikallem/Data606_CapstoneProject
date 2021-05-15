@@ -77,7 +77,7 @@ b. Normalization and Estimated weighted moving average to smoothen and filter do
 
 c. Run the processed signal through different functions from Neurokit.py using CVxOPT method by setting various parameters resulting in Phasic and Tonic components.
 Following Image shows how chnage in event period chnage sthe amplitude of Phasic and Tonic components. Though Phasic component is in response to the stimuli, tonic component also exhibits similar chnages in event period chnage.
-![](Iamge/Amplitude%20of%20Phasic%20and%20Tonic%20in%20each%20Event%20Period.PNG)
+![](Iamges/Amplitude%20of%20Phasic%20and%20Tonic%20in%20each%20Event%20Period.PNG)
 
 Feature-Based Learning  (Time Series Analysis):
 Though various research suggests that Multi-variate analysis using VAR and LSTM on time series data could give better predictions, but converting a sequential set of measures to feature vectors better captures global and dynamic properties of time series. Instead of deriving from the shapes of time series subsequences, understanding comes from time-series patterns, discriminating time series intervals that perfectly suit our classification problem.
@@ -111,6 +111,28 @@ c. VR Baseline vs VR Food Selection
 
 Prediction Analysis:
 GSR Feature Predictions:
-1- We have carried out analysis 
+1- We have carried out predictions to understand which features are better predciting the event period. Tried training models on Phasic&Tonic, just Phasic and just Tonic.
+Random forest model with 13 fold cross validation trained on both Phasic&Tonic data have predicted better results when compared to just Phasic and just Tonic models.
+2- Experiment VR Baseline vs Speech Emotion have better predicted when compared to other two experiments.
+3- Also analysis on the individual subjects using Leave One Group Out helps to understand indivudal behaviour of subjects which indeed performed poor when compared to KFold CV when all the subjects combined.
+Figure representing the Event wise discrimination of algorithms predicting the AUC score:
+![](Iamges/Experiment%20wise%20AUC%20scores%20for%20each%20algorithm%20on%20GSR%20features.PNG)
+
+HRV Feature Predictions:
+1-Similar to GSR Data HRV also exhibited the same out come, Kfold cross val with Random Forest on the VR Baseline vs Speech Emotion experiment have worked better than other algorithms and experiments.
+2- Also the individuals predictions have been similar to GSR but we can observe little but of stability among all the subjects during experiment VR Baseline vs Speech Emotion.
+Figure representing the Event wise discrimination of algorithms predicting the AUC score:
+![](Iamges/Experiment%20wise%20AUC%20scores%20for%20each%20algorithm%20on%20HRV%20features.PNG)
+
+Out Comes:
+1. Understanding and knowing whether GSR and ECG data are useful to analyze stress.
+2. Effect of different features.
+3. Confirmations for further research.
+
+Future Proceedings:
+1. Go to Task is to merge GSR and HRV features together and analyze results.
+2. Working on other psychological features and collecting more data.
+
+
 
 
