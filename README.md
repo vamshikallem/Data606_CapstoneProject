@@ -42,8 +42,10 @@ I have worked on two different types of Physiological data collected using shimm
 
 Our goal here is to understand Stress Indicating Factors (GSR&ECG) and discriminate each event period using the features extracted from GSR & ECG:
 
-Below is the Image representing three different event periods namely VR Baseline, Speech Emotion and Food Selection on a sample GSr signal.
-![](images/Image%20representing%20event%20periods.PNG)
+Below is the Image representing three different event periods namely VR Baseline, Speech Emotion and Food Selection on a sample GSR signal.
+![](Images/Image%20representing%20event%20periods.PNG)
+
+
 GSR or Electrodermal Activity:
 GSR is used to measure sweat gland activity related to emotional arousal, it refers to variation of electric conductance of the skin in response to skin secretion. 
 
