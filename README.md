@@ -63,3 +63,54 @@ Skin Conductance Level (SCL): Also called the Tonic component, is a slowly chang
 
 Below is the image discriminating raw GSR signal and its Phasic and Tonic components.
 ![](Images/Phasic%20and%20Tonic%20Components%20on%20GSR%20signal.PNG)
+
+The central problem in the analysis of the GSR signal is to separate these two signals using signal decomposition techniques. To carry out this operation of Decomposing raw GSR signal into Phasic and Tonic components, I have worked with two different tools from MATLAB and Python.
+
+Ledalab is software built on top of MATLAB. This software uses the Convolution Decomposition technique to separate Phasic and Tonic components. This is a drag-and-drop software that is efficient when a single file is processed, but when it is automated and all the files are processed sequentially, it took long sessions to give output, which is why I used Convex Optimization from Python.
+
+To extract these features we need to deocmpose the Raw GSR signal so that we can extract phasic and tonic components. I have used convex optimization technique from the neurokit.py module in python. To learn more about this method go to Greco2015cvxEDA.pdf or http://cvxopt.org/userguide/solvers.html#problems-with-nonlinear-objectives.
+Prior to that I have downsampled the signal by a factor of 8 to 16Hz and smoothened and normalized using EWM average and MinMax Scaler.
+
+a. Downsampling by the factor of 8 (128Hz-16Hz ).
+
+b. Normalization and Estimated weighted moving average to smoothen and filter downsampled signal.
+
+c. Run the processed signal through different functions from Neurokit.py using CVxOPT method by setting various parameters resulting in Phasic and Tonic components.
+Following Image shows how chnage in event period chnage sthe amplitude of Phasic and Tonic components. Though Phasic component is in response to the stimuli, tonic component also exhibits similar chnages in event period chnage.
+![](Iamge/Amplitude%20of%20Phasic%20and%20Tonic%20in%20each%20Event%20Period.PNG)
+
+Feature-Based Learning  (Time Series Analysis):
+Though various research suggests that Multi-variate analysis using VAR and LSTM on time series data could give better predictions, but converting a sequential set of measures to feature vectors better captures global and dynamic properties of time series. Instead of deriving from the shapes of time series subsequences, understanding comes from time-series patterns, discriminating time series intervals that perfectly suit our classification problem.
+
+Feature Extraction from Processed GSR:
+Next, we have to proceed further to understand and discriminate three different events using stress indicators factors that is, to extract various statistical features from a processed signal. Few of the statistical features include  Mean, SD, Peaks, Mean, Median, AUC, Slope, etcetera.
+
+I have extracted features from the Phasic and Tonic components of GSR signals using a Sliding window technique with an overlap of 50 and a window length of 100. 
+Images representing Number of features extracted for each subject(1st column is Subject_ID)
+![](Images/No.%20of%20GSR%20Features%20for%20each%20Subject.PNG)
+
+ECG or Electro Cardio Graph:
+This is heart related data and HRV features extracted from these signals are helpful to understand the stress analysis suring food selection process.
+Figure classifying QRS complex in a heart signal.
+![](Images/QRS_complex.PNG)
+
+HRV is the Heart Rate Variability computed using the location og R peaks present in the ECG signal. After extracting R peaks locations in a GSR signal, I have used sliding window technique with window length of 60 and overlap of 30 to extract hev features. I have used hrv_time() function from python neurokit.py module to extract HRV features from ECG signal where R peaks are located. https://neurokit2.readthedocs.io/en/latest/functions.html#module-neurokit2.hrv
+Image representing how Event period is effecting the HRV in individuals, you can clearly see increase in stress reduces HRV during Speech emotion task.
+![](Images/HRV%20Features%20in%20each%20Event%20Period.PNG)
+Images representing Number of features extracted for each subject(1st column is Subject_ID)
+![](Iamges/No.%20of%20HRV%20Features%20per%20Subject.PNG)
+
+Modeling using Cross-Validation:
+I have labeled each feature parameter with a respective event at that particular timestamp using the time stamp data and carried out binary classification on VR Baseline, Speech Emotion, and VR Food Selection events conducting three different experiments using K-Fold CV to discriminate among the events. Experiments namely,
+
+a. VR Baseline vs Speech Emotion
+
+b. Speech Emotion vs VR Food Selection
+
+c. VR Baseline vs VR Food Selection
+
+Prediction Analysis:
+GSR Feature Predictions:
+1- We have carried out analysis 
+
+
