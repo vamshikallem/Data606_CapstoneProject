@@ -62,3 +62,4 @@ b. NS-SCR- non-specific SCR occurs without any specific reason.
 Skin Conductance Level (SCL): Also called the Tonic component, is a slowly changing and continuous signal. Slow drifts in baseline and spontaneous fluctuations are the characters of this signal.
 
 Below is the image discriminating raw GSR signal and its Phasic and Tonic components.
+![](Images/Phasic%20and%20Tonic%20Components%20on%20GSR%20signal.PNG)
