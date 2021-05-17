@@ -1,6 +1,6 @@
 # Data606_CapstoneProject
 
-# Understanding Physiological and Neurological Fingerprint for Decision Making with Food Choices in Virtual Reality Environment 
+# Understanding Physiological Fingerprint for Decision Making with Food Choices in Virtual Reality Environment 
 
 INTRODUCTION:
 
