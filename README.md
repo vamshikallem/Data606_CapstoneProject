@@ -84,6 +84,7 @@ b. Normalization and Estimated weighted moving average to smoothen and filter do
 
 c. Run the processed signal through different functions from Neurokit.py using CVxOPT method by setting various parameters resulting in Phasic and Tonic components.
 Following Image shows how change in event period chnage sthe amplitude of Phasic and Tonic components. Though Phasic component is in response to the stimuli, tonic component also exhibits similar changes in event period change.
+
 ![](Images/Amplitude%20of%20Phasic%20and%20Tonic%20in%20each%20Event%20Period.PNG)
 
 Feature-Based Learning  (Time Series Analysis):
@@ -95,6 +96,7 @@ Feature Extraction from Processed GSR:
 Next, we have to proceed further to understand and discriminate three different events using stress indicators factors that is, to extract various statistical features from a processed signal. Few of the statistical features include  Mean, SD, Peaks, Mean, Median, AUC, Slope, etcetera.
 
 I have extracted features from the Phasic and Tonic components of GSR signals using a Sliding window technique with an overlap of 50 and a window length of 100. 
+
 Images representing Number of features extracted for each subject(1st column is Subject_ID)
 ![](Images/No.%20of%20GSR%20Features%20for%20each%20Subject.PNG)
 
@@ -107,6 +109,7 @@ Figure classifying QRS complex in a heart signal.
 HRV is the Heart Rate Variability computed using the location og R peaks present in the ECG signal. After extracting R peaks locations in a GSR signal, I have used sliding window technique with window length of 60 and overlap of 30 to extract hev features. I have used hrv_time() function from python neurokit.py module to extract HRV features from ECG signal where R peaks are located. https://neurokit2.readthedocs.io/en/latest/functions.html#module-neurokit2.hrv
 Image representing how Event period is effecting the HRV in individuals, you can clearly see increase in stress reduces HRV during Speech emotion task.
 ![](Images/HRV%20Features%20in%20each%20Event%20Period.PNG)
+
 Images representing Number of features extracted for each subject(1st column is Subject_ID)
 ![](Images/No.%20of%20HRV%20Features%20per%20Subject.PNG)
 
