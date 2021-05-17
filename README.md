@@ -44,7 +44,7 @@ To analyze the physiological behavior, they have used Shimmer's sensors and Micr
 
 I have worked on two different types of Physiological data collected using shimmer device. 
 1. GSR Data (Galvanic Skin Response) measures the skin conductance of sweat gland activity
-2. ECG Data (Eclectro Cardio Graph) helps to measure the heart rate variability 
+2. ECG Data (Electro Cardio Graph) helps to measure the heart rate variability 
 
 Our goal here is to understand Stress Indicating Factors (GSR&ECG) and discriminate each event period using the features extracted from GSR & ECG:
 
@@ -83,7 +83,7 @@ a. Downsampling by the factor of 8 (128Hz-16Hz ).
 b. Normalization and Estimated weighted moving average to smoothen and filter downsampled signal.
 
 c. Run the processed signal through different functions from Neurokit.py using CVxOPT method by setting various parameters resulting in Phasic and Tonic components.
-Following Image shows how chnage in event period chnage sthe amplitude of Phasic and Tonic components. Though Phasic component is in response to the stimuli, tonic component also exhibits similar chnages in event period chnage.
+Following Image shows how change in event period chnage sthe amplitude of Phasic and Tonic components. Though Phasic component is in response to the stimuli, tonic component also exhibits similar changes in event period change.
 ![](Images/Amplitude%20of%20Phasic%20and%20Tonic%20in%20each%20Event%20Period.PNG)
 
 Feature-Based Learning  (Time Series Analysis):
@@ -108,7 +108,7 @@ HRV is the Heart Rate Variability computed using the location og R peaks present
 Image representing how Event period is effecting the HRV in individuals, you can clearly see increase in stress reduces HRV during Speech emotion task.
 ![](Images/HRV%20Features%20in%20each%20Event%20Period.PNG)
 Images representing Number of features extracted for each subject(1st column is Subject_ID)
-![](Iamges/No.%20of%20HRV%20Features%20per%20Subject.PNG)
+![](Images/No.%20of%20HRV%20Features%20per%20Subject.PNG)
 
 Modeling using Cross-Validation:
 
@@ -150,7 +150,3 @@ Out Comes:
 Future Proceedings:
 1. Go to Task is to merge GSR and HRV features together and analyze results.
 2. Working on other psychological features and collecting more data.
-
-
-
-
